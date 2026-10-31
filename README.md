@@ -42,8 +42,11 @@ Requires Python 3.11 and Node.js 20+.
 python -m venv .venv
 .venv\Scripts\activate            # macOS/Linux: source .venv/bin/activate
 pip install -r requirements.txt
-copy .env.example .env            # macOS/Linux: cp .env.example .env  (optional: add a Gemini key)
 ```
+
+Optional: to use Gemini instead of the fallback templates, set your key before starting the backend
+(`$env:GEMINI_API_KEY = "..."` in PowerShell, `export GEMINI_API_KEY=...` on macOS/Linux). For the
+frontend, copy `UI/.env.example` to `UI/.env` and put the key there.
 
 The trained model is not in the repository (it is ~150 MB). Train it once:
 
